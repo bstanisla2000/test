@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портал реконструкции Дворца культуры в Комсомольске-на-Амуре: проект, этапы работ, голосования, экскурсии и предложения подрядчиков.">
+  <meta name="theme-color" content="#173f35">
+  <title>Дворец культуры — портал реконструкции</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23173f35'/%3E%3Cpath d='M16 44V20h8v24zm12 0V12h8v32zm12 0V25h8v19z' fill='%23dcf56a'/%3E%3C/svg%3E">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></symbol>
+    <symbol id="icon-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="icon-vote" viewBox="0 0 24 24"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="icon-hammer" viewBox="0 0 24 24"><path d="m15 12-8.5 8.5a2.12 2.12 0 1 1-3-3L12 9M17 2l5 5-4 4-5-5zM12 9l5 5"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="4"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-shell">
+      <a class="brand" href="#overview" aria-label="Дворец культуры — на главную">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span class="brand-name">Дворец культуры<small>открытая стройка</small></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a class="active" href="#overview">Обзор</a>
+        <a href="project.html">Проект</a>
+        <a href="#construction">Ход стройки</a>
+        <a href="#voting">Голосования</a>
+        <a href="#tours">Экскурсии</a>
+        <a href="contractors.html">Подрядчикам</a>
+        <a href="admin.html">Редактор</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button notification-button" type="button" aria-label="Уведомления">
+          <svg><use href="#icon-bell"></use></svg><span></span>
+        </button>
+        <button class="button button-small button-dark desktop-tour" type="button" data-open-tour>На экскурсию<svg><use href="#icon-arrow-up"></use></svg></button>
+        <button class="icon-button menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><svg><use href="#icon-menu"></use></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-shell" id="overview">
+      <div class="hero-copy">
+        <div class="hero-topline">
+          <span class="live-status"><i></i>Строим по графику</span>
+          <span>Обновлено сегодня</span>
+        </div>
+        <div>
+          <p class="eyebrow light">Реконструкция и реставрация · Комсомольск-на-Амуре</p>
+          <h1>Дворец<br>культуры<span>.</span></h1>
+          <p class="hero-description">Сохраняем архитектурное наследие.<br>Создаём современное пространство для культуры вместе.</p>
+          <p class="hero-contractor"><span>Работы выполняет</span><strong>ООО «СМУ-90»</strong></p>
+          <div class="hero-buttons">
+            <a class="button button-lime" href="#construction">Следить за стройкой<svg><use href="#icon-arrow"></use></svg></a>
+            <a class="text-link light-link" href="project.html">Смотреть проект<svg><use href="#icon-arrow-up"></use></svg></a>
+          </div>
+        </div>
+        <div class="hero-facts">
+          <div><strong>2023</strong><span>рабочая документация</span></div>
+          <div><strong>724-ГП</strong><span>генеральный план</span></div>
+          <div><strong>20</strong><span>страниц в разделе ГП</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/hero-building.svg" alt="Архитектурная иллюстрация Дворца культуры" fetchpriority="high">
+        <div class="visual-label"><span>Архитектурная концепция</span><span>01 / 04</span></div>
+        <div class="readiness-card">
+          <div class="progress-ring" style="--progress: 48">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="51"/><circle class="ring-value" cx="60" cy="60" r="51"/></svg>
+            <div><strong>48<span>%</span></strong><small>готово</small></div>
+          </div>
+          <p>Общая готовность<span><i></i>+3% за месяц</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-actions page-shell" aria-label="Быстрые действия">
+      <a class="quick-action" href="#voting">
+        <span class="quick-icon lime"><svg><use href="#icon-vote"></use></svg></span>
+        <span><strong>Принять участие</strong><small>Открыто 2 голосования</small></span>
+        <svg class="quick-arrow"><use href="#icon-arrow-up"></use></svg>
+      </a>
+      <button class="quick-action" type="button" data-open-tour>
+        <span class="quick-icon peach"><svg><use href="#icon-calendar"></use></svg></span>
+        <span><strong>Прийти на экскурсию</strong><small>Ближайшая — 28 ноября</small></span>
+        <svg class="quick-arrow"><use href="#icon-arrow-up"></use></svg>
+      </button>
+      <a class="quick-action" href="contractors.html">
+        <span class="quick-icon blue"><svg><use href="#icon-hammer"></use></svg></span>
+        <span><strong>Стать подрядчиком</strong><small>Открыто 3 закупки</small></span>
+        <svg class="quick-arrow"><use href="#icon-arrow-up"></use></svg>
+      </a>
+    </section>
+
+    <section class="section page-shell" id="construction">
+      <div class="section-heading">
+        <div><p class="eyebrow">Прозрачно на каждом этапе</p><h2>Сейчас на площадке</h2></div>
+        <button class="text-link" type="button" data-open-report>Отчёт за ноябрь<svg><use href="#icon-arrow-up"></use></svg></button>
+      </div>
+      <div class="current-stage">
+        <div class="stage-info">
+          <div class="stage-top"><span class="tag tag-green">Этап 03 / 06</span><span class="update-time"><i></i>Обновлено 2 часа назад</span></div>
+          <h3>Строительно-монтажные работы</h3>
+          <p>Работы на объекте выполняет ООО «СМУ-90». Здесь публикуются подтверждённый статус текущего этапа и подробные отчёты с площадки.</p>
+          <div class="stage-progress-label"><span>Готовность этапа</span><strong>68%</strong></div>
+          <div class="progress-bar"><span style="width:68%"></span></div>
+          <div class="stage-stats">
+            <div><strong>2023</strong><small>рабочая документация</small></div>
+            <div><strong>724-ГП</strong><small>генеральный план</small></div>
+            <div><strong>СМУ-90</strong><small>подрядчик</small></div>
+          </div>
+        </div>
+        <div class="stage-photo">
+          <img src="assets/construction.svg" alt="Иллюстрация строительной площадки Дворца культуры" loading="lazy">
+          <span class="photo-date"><svg><use href="#icon-camera"></use></svg>18 ноября 2026</span>
+          <button class="photo-button" type="button" data-open-gallery>Смотреть 24 фото<svg><use href="#icon-arrow-up"></use></svg></button>
+        </div>
+      </div>
+      <div class="stage-list" aria-label="Этапы строительства">
+        <div class="stage-item completed"><span class="stage-number"><svg><use href="#icon-check"></use></svg></span><div><strong>Подготовка</strong><small>Завершено</small></div><span class="stage-percent">100%</span></div>
+        <div class="stage-item completed"><span class="stage-number"><svg><use href="#icon-check"></use></svg></span><div><strong>Фундамент</strong><small>Завершено</small></div><span class="stage-percent">100%</span></div>
+        <div class="stage-item current"><span class="stage-number">03</span><div><strong>Монолитный каркас</strong><small>В работе</small></div><span class="stage-percent">68%</span></div>
+        <div class="stage-item"><span class="stage-number">04</span><div><strong>Фасад и окна</strong><small>Январь 2027</small></div><span class="stage-percent">0%</span></div>
+        <div class="stage-item"><span class="stage-number">05</span><div><strong>Инженерия</strong><small>Март 2027</small></div><span class="stage-percent">0%</span></div>
+        <div class="stage-item"><span class="stage-number">06</span><div><strong>Благоустройство</strong><small>Июнь 2027</small></div><span class="stage-percent">0%</span></div>
+      </div>
+    </section>
+
+    <section class="section page-shell home-project-link">
+      <a class="home-project-banner" href="project.html">
+        <span class="quick-icon lime"><svg><use href="#icon-doc"></use></svg></span>
+        <span><span class="eyebrow">Проект и документация</span><strong>Все чертежи и изменения — на отдельной странице</strong></span>
+        <span class="button button-dark">Открыть проект<svg><use href="#icon-arrow"></use></svg></span>
+      </a>
+    </section>
+
+    <section class="section page-shell voting-section" id="voting">
+      <div class="voting-intro">
+        <p class="eyebrow">Голосования горожан</p>
+        <h2>Ваше мнение<br>меняет проект</h2>
+        <p>Решения, которые мы принимаем вместе, становятся частью проекта. Один участник — один голос.</p>
+        <div class="voting-meta"><span class="avatar-stack"><i>АК</i><i>МС</i><i>+</i></span><span><strong>126 горожан</strong><small>уже участвуют</small></span></div>
+        <div class="previous-vote"><svg><use href="#icon-check"></use></svg><span><strong>Прошлое голосование завершено</strong><small>72% поддержали сохранение исторического облика фасадов</small></span></div>
+      </div>
+      <div class="poll-card" id="poll-card">
+        <div class="poll-top"><span class="tag tag-green">Голосование открыто</span><span><svg><use href="#icon-clock"></use></svg>До 30 ноября</span></div>
+        <h3>Какое пространство открыть первым?</h3>
+        <p>Выберите один вариант. Результат будет учтён при формировании программы Дворца культуры.</p>
+        <form id="poll-form">
+          <div class="poll-options">
+            <label class="poll-option" data-option="0">
+              <input type="radio" name="space" value="Лекторий">
+              <span class="custom-radio"></span>
+              <span class="option-copy"><strong>Лекторий</strong><small>Зал для встреч, лекций и публичных обсуждений</small></span>
+              <span class="poll-percent">42%</span><span class="poll-bar"><i style="width:42%"></i></span>
+            </label>
+            <label class="poll-option" data-option="1">
+              <input type="radio" name="space" value="Творческие мастерские">
+              <span class="custom-radio"></span>
+              <span class="option-copy"><strong>Творческие мастерские</strong><small>Студии живописи, керамики и ремёсел</small></span>
+              <span class="poll-percent">38%</span><span class="poll-bar"><i style="width:38%"></i></span>
+            </label>
+            <label class="poll-option" data-option="2">
+              <input type="radio" name="space" value="Детская студия">
+              <span class="custom-radio"></span>
+              <span class="option-copy"><strong>Детская студия</strong><small>Пространство для театральных и музыкальных занятий</small></span>
+              <span class="poll-percent">20%</span><span class="poll-bar"><i style="width:20%"></i></span>
+            </label>
+          </div>
+          <button class="button button-dark button-full" id="vote-button" type="submit" disabled>Проголосовать<svg><use href="#icon-arrow"></use></svg></button>
+          <p class="poll-note" id="poll-note"><svg><use href="#icon-shield"></use></svg>Голос сохраняется анонимно</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section page-shell" id="tours">
+      <div class="tour-card">
+        <div class="tour-image">
+          <img src="assets/tour-engineers.svg" alt="Экскурсия по строительной площадке" loading="lazy">
+          <div class="tour-image-caption"><svg><use href="#icon-map"></use></svg><span>Строительная площадка<small>ул. Аллея Труда, д. 22</small></span></div>
+        </div>
+        <div class="tour-content">
+          <p class="eyebrow">Открытые экскурсии</p>
+          <h2>Покажем всё<br>как есть</h2>
+          <p class="tour-description">Пройдём по площадке с главным инженером, посмотрим на технологии и ответим на ваши вопросы.</p>
+          <div class="tour-features"><span><svg><use href="#icon-clock"></use></svg>1,5 часа</span><span><svg><use href="#icon-users"></use></svg>До 12 человек</span><span><svg><use href="#icon-shield"></use></svg>Экипировка включена</span></div>
+          <div class="date-label">Выберите дату</div>
+          <div class="date-options" role="group" aria-label="Дата экскурсии">
+            <button class="date-option active" type="button" data-date="28 ноября, суббота" data-spots="6"><strong>28</strong><span>ноября<small>суббота</small></span><i>6 мест</i></button>
+            <button class="date-option" type="button" data-date="5 декабря, суббота" data-spots="9"><strong>05</strong><span>декабря<small>суббота</small></span><i>9 мест</i></button>
+            <button class="date-option" type="button" data-date="12 декабря, суббота" data-spots="12"><strong>12</strong><span>декабря<small>суббота</small></span><i>12 мест</i></button>
+          </div>
+          <button class="button button-dark" type="button" data-open-tour>Записаться на экскурсию<svg><use href="#icon-arrow"></use></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-shell home-contractor-link">
+      <a class="home-project-banner contractor-banner" href="contractors.html">
+        <span class="quick-icon blue"><svg><use href="#icon-hammer"></use></svg></span>
+        <span><span class="eyebrow">ООО «СМУ-90» · 3 открытые закупки</span><strong>Коммерческие предложения принимаются на новой странице</strong></span>
+        <span class="button button-lime">Подрядчикам<svg><use href="#icon-arrow"></use></svg></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-main">
+      <a class="brand footer-brand" href="#overview"><span class="brand-mark"><i></i><i></i><i></i></span><span class="brand-name">Дворец культуры<small>открытая стройка</small></span></a>
+      <p>Строим прозрачно.<br>Создаём вместе.</p>
+      <div class="footer-links"><a href="project.html">Проект</a><a href="#construction">Ход стройки</a><a href="#voting">Голосования</a><a href="#tours">Экскурсии</a></div>
+      <div class="footer-contact"><a href="mailto:hello@example.com">hello@example.com</a><span>Комсомольск-на-Амуре,<br>ул. Аллея Труда, д. 22</span></div>
+    </div>
+    <div class="page-shell footer-bottom"><span>© 2026 Дворец культуры</span><span>Демо-версия: данные форм сохраняются только в этом браузере</span><a href="#overview">Наверх ↑</a></div>
+  </footer>
+
+  <dialog class="modal" id="tour-dialog" aria-labelledby="tour-dialog-title">
+    <div class="modal-shell">
+      <button class="modal-close" type="button" data-close aria-label="Закрыть"><svg><use href="#icon-close"></use></svg></button>
+      <span class="modal-icon peach"><svg><use href="#icon-calendar"></use></svg></span>
+      <p class="eyebrow">Открытая экскурсия</p>
+      <h2 id="tour-dialog-title">Увидимся на площадке</h2>
+      <p class="modal-description">Оставьте контакты — координатор подтвердит запись и пришлёт инструкции.</p>
+      <div class="selected-date"><svg><use href="#icon-calendar"></use></svg><span><small>Вы выбрали</small><strong id="tour-selected-date">28 ноября, суббота</strong></span><span id="tour-selected-spots">6 мест</span></div>
+      <form id="tour-form" novalidate>
+        <input type="hidden" name="date" id="tour-date-input" value="28 ноября, суббота">
+        <label class="field"><span>Ваше имя *</span><input type="text" name="name" autocomplete="name" placeholder="Например, Анна" required></label>
+        <label class="field"><span>Телефон *</span><input type="tel" name="phone" autocomplete="tel" placeholder="+7 999 000-00-00" required></label>
+        <label class="field"><span>Количество гостей</span><select name="guests"><option value="1">1 человек</option><option value="2">2 человека</option><option value="3">3 человека</option><option value="4">4 человека</option></select></label>
+        <label class="checkbox-field"><input type="checkbox" name="consent" required><span>Согласен на обработку данных для организации экскурсии</span></label>
+        <button class="button button-dark button-full" type="submit">Подтвердить запись<svg><use href="#icon-arrow"></use></svg></button>
+      </form>
+    </div>
+  </dialog>
+
+   <dialog class="modal gallery-modal" id="gallery-dialog" aria-labelledby="gallery-title">
+    <div class="modal-shell">
+      <button class="modal-close" type="button" data-close aria-label="Закрыть"><svg><use href="#icon-close"></use></svg></button>
+      <p class="eyebrow">Фото с площадки</p><h2 id="gallery-title">Ноябрь 2026</h2>
+      <div class="gallery-grid">
+        <img src="assets/construction.svg" alt="Общий вид строительной площадки">
+        <img src="assets/tour-engineers.svg" alt="Работы на строительной площадке">
+        <img src="assets/project-plan.svg" alt="Работа с проектной документацией">
+      </div>
+      <p class="gallery-note">Показаны 3 фотографии из демонстрационного отчёта.</p>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="report-dialog" aria-labelledby="report-title">
+    <div class="modal-shell">
+      <button class="modal-close" type="button" data-close aria-label="Закрыть"><svg><use href="#icon-close"></use></svg></button>
+      <span class="modal-icon lime"><svg><use href="#icon-doc"></use></svg></span>
+      <p class="eyebrow">Ежемесячный отчёт</p><h2 id="report-title">Ноябрь 2026</h2>
+      <p class="modal-description">Главное о ходе строительства за месяц.</p>
+      <div class="report-stats"><div><strong>+3%</strong><span>к общей готовности</span></div><div><strong>1 этап</strong><span>работ завершён</span></div><div><strong>0</strong><span>нарушений безопасности</span></div></div>
+      <ul class="report-list"><li><svg><use href="#icon-check"></use></svg>Обновлены данные по текущему этапу реконструкции</li><li><svg><use href="#icon-check"></use></svg>Проведён контроль качества выполненных работ</li><li><svg><use href="#icon-check"></use></svg>ООО «СМУ-90» передало новый фотоотчёт</li></ul>
+      <button class="button button-dark button-full" type="button" id="download-report">Скачать отчёт<svg><use href="#icon-download"></use></svg></button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-icon"><svg><use href="#icon-check"></use></svg></span><span id="toast-message"></span><button type="button" aria-label="Закрыть уведомление"><svg><use href="#icon-close"></use></svg></button></div>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Вход в редактор портала Дворца культуры.">
+  <meta name="theme-color" content="#173f35">
+  <title>Вход в редактор — Дворец культуры</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23173f35'/%3E%3Cpath d='M16 44V20h8v24zm12 0V12h8v32zm12 0V25h8v19z' fill='%23dcf56a'/%3E%3C/svg%3E">
+  <script src="auth.js"></script>
+</head>
+<body class="login-body">
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="icon-eye-off" viewBox="0 0 24 24"><path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.2A10.7 10.7 0 0 1 12 5c6.5 0 10 7 10 7a18 18 0 0 1-2.2 3.1M6.2 6.2C3.4 8.1 2 12 2 12s3.5 7 10 7a10.8 10.8 0 0 0 4.1-.8"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+  </svg>
+
+  <main class="login-layout">
+    <section class="login-intro">
+      <a class="brand login-brand" href="index.html" aria-label="Дворец культуры — на главную"><span class="brand-mark"><i></i><i></i><i></i></span><span class="brand-name">Дворец культуры<small>открытая стройка</small></span></a>
+      <div class="login-intro-copy">
+        <span class="login-shield"><svg><use href="#icon-shield"></use></svg></span>
+        <p class="eyebrow light">Закрытый раздел портала</p>
+        <h1>Управление<br>содержимым<span>.</span></h1>
+        <p>Единое пространство для обновления хода работ, проектной документации и фотоотчётов.</p>
+      </div>
+      <div class="login-intro-footer"><span>Объект</span><strong>Комсомольск-на-Амуре, ул. Аллея Труда, 22</strong></div>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-form-wrapper">
+        <a class="login-back" href="index.html">← Вернуться на сайт</a>
+        <p class="eyebrow">Авторизация</p>
+        <h2>Вход в редактор</h2>
+        <p class="login-description">Введите данные администратора, чтобы перейти к управлению контентом.</p>
+        <div class="demo-credentials"><span>Данные для демо-доступа</span><div><span>Логин <code>admin</code></span><span>Пароль <code>SMU-90</code></span></div></div>
+        <form id="login-form" class="login-form" novalidate>
+          <label class="field"><span>Логин</span><input type="text" name="username" autocomplete="username" placeholder="Введите логин" required autofocus></label>
+          <label class="field"><span>Пароль</span><span class="password-field"><input type="password" name="password" id="login-password" autocomplete="current-password" placeholder="Введите пароль" required><button type="button" id="toggle-password" aria-label="Показать пароль"><svg><use href="#icon-eye"></use></svg></button></span></label>
+          <p class="login-error" id="login-error" role="alert" hidden></p>
+          <button class="button button-dark button-full login-submit" type="submit">Войти в редактор<svg><use href="#icon-arrow"></use></svg></button>
+        </form>
+        <div class="login-session-note"><svg><use href="#icon-info"></use></svg><p>Сессия действует 8 часов в текущей вкладке. После выхода потребуется снова ввести пароль.</p></div>
+        <p class="login-security-note">Демонстрационная авторизация. Для защиты публичного сайта необходимы серверная проверка пароля и безопасные сессии.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
